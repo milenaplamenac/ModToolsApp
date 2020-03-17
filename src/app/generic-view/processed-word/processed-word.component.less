@@ -1,0 +1,38 @@
+@processed-word-text-height: 50px;
+@processed-word-tokens-background-color: #505050;
+
+
+#wrapper {
+    position: relative;
+    display: inline-block;
+    #processed_word_text {
+        height: @processed-word-text-height;
+        margin-bottom: 0;
+        font-size: 1.2em;
+        border-radius: 2px;
+
+        p {
+            margin: 0;
+        }     
+    }
+
+    #processed_word_tokens{
+        min-width: 500px;
+        background: @processed-word-tokens-background-color;
+        position: absolute;
+        top: @processed-word-text-height; 
+        left: 0;
+        z-index: 10;
+    }
+
+}
+    
+
+    
+    
+    
+    
+    
+    
+    
+    

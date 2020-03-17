@@ -1,0 +1,40 @@
+<div id="wrapper">
+    <div>
+        <div *ngFor="let item of data.words" class="display-inline-block">
+            <div>
+                <processed-word [processedWord]="item" [type]="'original'"></processed-word>
+            </div>
+
+            <div>
+                <processed-word [processedWord]="item" [type]="'processed'"></processed-word>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h2>{{data.text}}</h2>
+
+        <hr>
+
+        <div id="topics_and_policies">
+            <div>
+
+                <div *ngFor="let processedTopic of data.topics" >
+                    <processed-topic [processedTopic]="processedTopic" ></processed-topic>
+                </div>
+            </div>
+
+            <div>
+                <p class="placeholder">Missing Policies</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div *ngFor="let processedPrediction of data.predictions">
+            <processed-prediction [processedPrediction]="processedPrediction"></processed-prediction>
+        </div>
+
+    </div>
+</div>

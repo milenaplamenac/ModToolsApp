@@ -1,0 +1,7 @@
+<div id="wrapper" class="position-relative">
+    <div class="padding-default position-relative">{{processedPrediction.name}}</div>
+    <div class="padding-default position-relative">
+        <div class="line" [ngStyle]="{'width': 'calc(' + processedPrediction.value + '% - 10px)'}"></div>
+    </div>
+    <div class="padding-default position-relative">{{processedPrediction.value | round}}%</div>
+</div>

@@ -1,0 +1,17 @@
+<div id="wrapper">
+    <button id="custom_select" (mouseover)="mouseOverCustomSelect=true;" (mouseout)="mouseOverCustomSelect=false;">
+        <span>{{selectedOption.option}}</span>
+        <i class="mdi mdi-chevron-down"></i>
+    </button>
+
+    <div id="custom_select_options" (mouseover)="mouseOverCustomSelect=true;" (mouseout)="mouseOverCustomSelect=false;"
+        [ngClass]="{'show': mouseOverCustomSelect, 'hide':!mouseOverCustomSelect }">
+
+        <div *ngFor="let option of options" (click)="setSelectedOption(option)" class="styleOptions"
+            [ngClass]="{'selected': option.value == selectedOption.value && option.option == selectedOption.option}">
+            <span>{{option.option}}
+                <i class="mdi mdi-check"></i>
+            </span>
+        </div>
+    </div>
+</div>

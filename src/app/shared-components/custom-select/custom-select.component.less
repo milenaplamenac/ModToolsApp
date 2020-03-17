@@ -1,0 +1,51 @@
+#wrapper {
+    position: relative;
+    display: inline-block;
+    min-width: var(--custom-select-min-width);
+    z-index: 1000;
+
+    i {
+        padding-left: var(--custom-select-default-padding);
+    }
+
+    #custom_select {
+        width: 100%;
+        height: var(--custom-select-option-height);
+        display: inline-block;
+        outline: none;
+    }
+     
+    #custom_select_options {
+        background: var(--custom-select-option-background-color);
+        color: var(--custom-select-option-color);
+        position: absolute;
+        top: var(--custom-select-option-height);
+        right: 0;
+        cursor: pointer;
+
+            i {
+                opacity: 0; 
+            }
+    
+            .selected {
+                color: var(--custom-select-selected-color);
+                background-color: var(--custom-select-selected-background-color);
+                i {
+                     opacity: 1;  
+                }
+            } 
+    }
+
+    .styleOptions {
+        padding: var(--custom-select-default-padding);
+  
+    }
+}
+
+
+
+
+
+
+
+

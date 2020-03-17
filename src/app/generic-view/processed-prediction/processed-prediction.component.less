@@ -1,0 +1,17 @@
+@linecolor : #58C1B8;
+@lineheight : 3px;
+
+#wrapper{
+    border-bottom: 2px solid black;
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    padding: 0px;
+    .line{
+      height: @lineheight;
+      background-color: @linecolor;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 2px;
+  }
+}

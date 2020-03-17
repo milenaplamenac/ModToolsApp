@@ -1,0 +1,42 @@
+<section id="generic-view">
+
+  <header>
+
+    <div id="wrapper">
+      <div>
+        <h2>Diagnose</h2>
+
+        <!-- <nav class="breadcrumb">
+          <xng-breadcrumb></xng-breadcrumb>
+        </nav> -->
+        <p class="placeholder">here would come some breadcrums... </p>
+      </div>
+
+      <div class="position-relative">
+        <!-- 'style' is bad -->
+        <div class="vertical-align" style="right: 0;"> 
+          <button (click)="callApi()" style="background: transparent; cursor: pointer;">
+            <i class="mdi mdi-autorenew mdi-24px"></i>
+          </button>
+
+          <!-- select language -->
+          <custom-select [options]='languageOptions' [defaultSelectOption]='defaultLanguageSelectOption'
+            class="margin-default" (selectChanged)="languageChanged($event)"></custom-select>
+
+          <!-- select type -->
+          <custom-select [options]='contentTypeOptions' [defaultSelectOption]='defaultContentTypeSelectOption'
+            class="margin-default" (selectChanged)="contentTypeChanged($event)"></custom-select>
+
+          <!-- select live -->
+          <custom-select [options]='clientOptions' [defaultSelectOption]='defaultClientSelectOption'
+            class="margin-default" (selectChanged)="clientChanged($event)"></custom-select>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+  <diagnose-view></diagnose-view>
+
+</section>
