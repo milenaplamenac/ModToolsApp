@@ -1,7 +1,19 @@
 @proccesed-token-background-color: #292929;
 @proccesed-token-border-bottom: #303030;
 
+@proccesed-token-light-background-color: #333333;
+
 #wrapper{
     background-color: @proccesed-token-background-color;
     border-bottom: 1px solid @proccesed-token-border-bottom;
+
+    &.lightStyle{
+        background-color: @proccesed-token-light-background-color;
+    }
+
+    #processedTokenText{
+        display: inline-block;
+        width: 150px;
+    }
 }
+

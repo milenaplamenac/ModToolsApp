@@ -14,32 +14,11 @@ export class ProcessedWordComponent implements OnInit {
   @Input()
   processedWord: IProcessedWord;
 
-  // @Input()
-  bgColor: string;
-  
-  // @Input()
-  fgColor: string;
-
   mouseOverProcessedWord: boolean = false; 
 
   constructor() { }
 
   ngOnInit(): void {
-    this.setColors();
-  }
-
-  setColors() {
-    // I suppose there is a logic regarding colors, but for now lets make them static
-    if(this.type == 'original')
-    {
-      this.bgColor = "#292929";
-      this.fgColor = "whitesmoke";
-    }
-    else{
-      this.bgColor = "#e0ebd8";
-      this.fgColor = "#212121";
-    }
-    
   }
 
 }

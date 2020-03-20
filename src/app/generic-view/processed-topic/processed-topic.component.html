@@ -1,8 +1,5 @@
-<p id="processed_topic"
-    [ngStyle]="{'background-color' : bgColor, 'color' : fgColor, 'border-left-color' : borderColor}"
-    class="padding-default margin-default"
-    >
-
-    <i class="mdi mdi-{{topicIcon}} mdi-18px"></i> {{topicName}} : {{processedTopic[1]}}
-    
+<p id="processed_topic" [ngClass]="processedTopic.value>5?'dangerRisk':processedTopic.value>3?'middleRisk':'okRisk'"
+    class="padding-default margin-default">
+    <i class="mdi mdi-{{processedTopic.topic['icon'].replace('${risk}', processedTopic.value)}} mdi-18px padding-default"></i>
+        {{processedTopic.topic['name']}} : {{processedTopic.value}}
 </p>

@@ -1,6 +1,6 @@
-<div id="wrapper">
+<div id="wrapper" [ngClass]="{'lightStyle' : applyLightStyle}">
     <span id="processedTokenText" class="padding-default">{{processedToken.text}}</span>
-    <div *ngFor="let processedTopic of processedToken.topics" class="display-inline-block ">
+    <div *ngFor="let processedTopic of processedToken.topics" class="display-inline-block">
         <processed-topic [processedTopic]="processedTopic"></processed-topic>
     </div>
 </div>

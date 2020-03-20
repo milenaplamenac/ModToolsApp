@@ -1,27 +1,24 @@
 <div id="wrapper" class="margin-default">
-    <div id="processed_word_text" class="padding-default"
-        (mouseover)="mouseOverProcessedWord=true;"
-        (mouseout)="mouseOverProcessedWord=false;"
-        [ngStyle]="{'background-color': bgColor, 'color': fgColor}">
+    <div id="processed_word_text" class="padding-default" [ngClass]="type=='original'?'typeoriginal':'typeprocessed'"
+        (mouseover)="mouseOverProcessedWord=true;" (mouseout)="mouseOverProcessedWord=false;">
 
         <ng-container *ngIf="type == 'original'; then original; else processed"></ng-container>
 
-        <ng-template #original>
+        <ng-template #original class="typeoriginal">
             <p>{{processedWord.original}}</p>
         </ng-template>
 
-        <ng-template #processed>
+        <ng-template #processed class="typeprocessed">
             <p>{{processedWord.solution}}</p>
         </ng-template>
     </div>
 
-    <div id="processed_word_tokens" 
-        (mouseover)="mouseOverProcessedWord=true;"
+    <div id="processed_word_tokens" (mouseover)="mouseOverProcessedWord=true;"
         (mouseout)="mouseOverProcessedWord=false;"
         [ngClass]="{'show': mouseOverProcessedWord, 'hide':!mouseOverProcessedWord }" *ngIf="type=='processed'">
 
-        <div *ngFor="let processedToken of processedWord.tokens">
-            <processed-token [processedToken]="processedToken"></processed-token>
+        <div *ngFor="let processedToken of processedWord.tokens; let i = index">
+            <processed-token [processedToken]="processedToken" [applyLightStyle]="i==0?true:false"></processed-token>
         </div>
     </div>
 

@@ -1,3 +1,22 @@
+@processed-topic-background-color : #212121;
+@processed-topic-color : whitesmoke;
+
+@ok-risk-border-color: green;
+@middle-risk-border-color: orange;
+@danger-risk-border-color: red;
+
 #processed_topic{
     border: 3px solid transparent;
+    background-color: @processed-topic-background-color;
+    color: @processed-topic-color;
+    &.okRisk{
+        border-left-color:@ok-risk-border-color;
+    }
+    &.middleRisk{
+        border-left-color: @middle-risk-border-color;
+    }
+    &.dangerRisk{
+        border-left-color: @danger-risk-border-color;
+    }
+
 }

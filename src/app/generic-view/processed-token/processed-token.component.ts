@@ -11,6 +11,9 @@ export class ProcessedTokenComponent implements OnInit {
   @Input()
   processedToken: IProcessedToken;
 
+  @Input()
+  applyLightStyle: boolean;
+
   constructor() { }
 
   ngOnInit(): void {

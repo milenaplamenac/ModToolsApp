@@ -7,7 +7,6 @@
 
             <div>
                 <processed-word [processedWord]="item" [type]="'processed'"></processed-word>
-
             </div>
         </div>
     </div>
@@ -19,14 +18,15 @@
 
         <div id="topics_and_policies">
             <div>
-
                 <div *ngFor="let processedTopic of data.topics" >
                     <processed-topic [processedTopic]="processedTopic" ></processed-topic>
                 </div>
             </div>
 
             <div>
-                <p class="placeholder">Missing Policies</p>
+                <div *ngFor="let processedPolicyGuide of data.policyGuides" >
+                    <processed-policy-guide [processedPolicyGuide]="processedPolicyGuide" ></processed-policy-guide>
+                </div>
             </div>
         </div>
 

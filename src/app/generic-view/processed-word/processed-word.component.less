@@ -1,6 +1,12 @@
 @processed-word-text-height: 50px;
 @processed-word-tokens-background-color: #505050;
 
+@processed-word-typeoriginal-color: whitesmoke;
+@processed-word-typeoriginal-background-color: #292929;
+
+@processed-word-typeprocessed-color: #212121;
+@processed-word-typeprocessed-background-color: #e0ebd8;
+
 
 #wrapper {
     position: relative;
@@ -10,21 +16,28 @@
         margin-bottom: 0;
         font-size: 1.2em;
         border-radius: 2px;
-
+        
         p {
             margin: 0;
-        }     
+        }
+        &.typeoriginal{
+            color: @processed-word-typeoriginal-color;
+            background-color: @processed-word-typeoriginal-background-color;
+        }
+        &.typeprocessed{
+            color: @processed-word-typeprocessed-color;
+            background-color: @processed-word-typeprocessed-background-color;
+        }
     }
-
+    
     #processed_word_tokens{
-        min-width: 500px;
         background: @processed-word-tokens-background-color;
         position: absolute;
         top: @processed-word-text-height; 
         left: 0;
         z-index: 10;
+        white-space: nowrap;
     }
-
 }
     
 

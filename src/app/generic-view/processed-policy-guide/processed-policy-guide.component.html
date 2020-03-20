@@ -1,0 +1,6 @@
+<p id="processed_policy_guide" [ngClass]="!processedPolicyGuide.policySecure?'dangerRisk':'okRisk'"
+    class="padding-default margin-default">
+
+    <i class="mdi mdi-{{processedPolicyGuide.policySecure?'thumb-up':'thumb-down'}} mdi-18px padding-default"></i>
+    {{processedPolicyGuide.policy['name']}}
+</p>

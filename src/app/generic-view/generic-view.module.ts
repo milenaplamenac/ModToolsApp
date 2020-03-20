@@ -11,10 +11,12 @@ import { ProcessedWordComponent } from './processed-word/processed-word.componen
 import { ProcessedTokenComponent } from './processed-token/processed-token.component';
 import { ProcessedTopicComponent } from './processed-topic/processed-topic.component';
 import { ProcessedPredictionComponent } from './processed-prediction/processed-prediction.component';
+import { ProcessedPolicyGuideComponent } from './processed-policy-guide/processed-policy-guide.component';
+
 
 
 @NgModule({
-  declarations: [GenericViewComponent, DiagnoseViewComponent, ProcessedWordComponent, ProcessedTokenComponent, ProcessedTopicComponent, ProcessedPredictionComponent],
+  declarations: [GenericViewComponent, DiagnoseViewComponent, ProcessedWordComponent, ProcessedTokenComponent, ProcessedTopicComponent, ProcessedPredictionComponent, ProcessedPolicyGuideComponent],
   imports: [
     CommonModule,
     GenericViewRoutingModule,

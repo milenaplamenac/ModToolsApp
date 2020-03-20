@@ -96,3 +96,35 @@ export const ContentTypes: ContentType[] = [
 ]
 
 export const DefaultContentType = { type: 'SHORTTEXT', name: 'Short text' };
+
+// Policies
+
+export class Policies {
+  public static '0' = { id: 'globalchat', name: 'Global Chat' };
+  public static '1' = { id: 'privatechat', name: 'Private Chat' };
+}
+
+export interface PolicyTrashold {
+  topic: Topics,
+  value: number
+}
+
+export interface PolicyGuide {
+  webpage: any, // This is for future use, any webpage has its own policy guides
+  policy: Policies,
+  policyTrasholds: PolicyTrashold[]
+}
+
+
+export const PolicyGuides: PolicyGuide[] = [{
+  webpage: null, policy: Policies['0'], policyTrasholds: [
+    { topic: Topics['0'], value: 6 },
+    { topic: Topics['5'], value: 5 }
+  ]
+},
+{
+  webpage: null, policy: Policies['1'], policyTrasholds: [
+    { topic: Topics['5'], value: 6 }
+  ]
+}
+]
